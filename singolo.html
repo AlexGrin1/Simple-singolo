@@ -1,0 +1,331 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" sizes="250x250" href="">
+    <link rel="stylesheet" href="">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: auto;
+            margin: 0 auto;
+            align-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .first_block {
+            width: 100vw;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            position: fixed;
+            top: 0;
+            align-self: center;
+            background: #2D303A;
+            color: white;
+            box-shadow: 0 5px 0 #323746;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            margin: 0;
+            padding-right: 0;
+            z-index: 2;
+        }
+        .title {
+            width: 1200px;
+            max-width: 1200px;
+            justify-content: space-between;
+            height: auto;
+            border: 1px solid red;
+        }
+
+        .second_block {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            top: 0;
+            background-color: #F06C64
+        }
+        .fhor_block {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            top: 0;
+            background: rgb(50, 50, 51);
+        }
+
+        .fhor_block0 {
+            background-color: rgb(50, 50, 51);
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+        }
+        .fhor_block1 {
+            width: 1200px;
+            max-width: 1200px;
+            height: auto;
+            text-align: justify;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: rgb(255, 255, 255);
+            box-sizing: border-box;
+        }
+        .fhor_block2 {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            color: rgb(36, 32, 32);
+        }
+        .five_block {
+            width: 100vw;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            top: 0;
+            background: rgb(50, 50, 51);
+            border-top: 4px solid #323746;
+        }
+        .five_block0 {
+            background-color: rgb(50, 50, 51);
+            width: 1200px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            position: relative;
+        }
+
+        .foot_right {
+            display: inline;
+            border: 1px solid red;
+
+        }
+
+        .cont2 {
+            width: auto;
+            max-width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+            background-color: #F06C64;
+
+            align-self: center;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 95px;
+            margin-bottom: 0;
+            color: white;
+            box-sizing: border-box;
+        }
+        .cont3 {
+            width: 1200px;
+            max-width: 1200px;
+            height: auto;
+            text-align: justify;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: rgb(36, 32, 32);
+            box-sizing: border-box;
+        }
+        .cont3_1 {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            color: rgb(36, 32, 32);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .block1 {
+            align-items: center;
+            padding: 10px 20px;
+            width: 250px;
+            margin: auto;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 1.6em;
+        }
+        .block2 {
+            margin: auto;
+            text-align: right;
+            margin-right: 40px;
+        }
+        .image {
+            width: 1000px;
+            height: auto;
+        }
+        h3 {
+            font-size: 2em;
+        }
+
+        h4 {
+            font-size: 1.6em;
+        }
+        .text {
+            font-size: 1.5em;
+        }
+        .potfol {
+            margin: 20px;
+            list-style-type: none;
+            overflow: hidden;
+        }
+        .icon {
+            width: 100%;
+            height: 100%;
+        }
+        .li {
+            width: 400px;
+            height: 200px;
+            margin: 20px 0 20px 0;
+            list-style-type: none;
+            overflow: hidden;
+            padding-left: 100px;
+        }
+        a:hover {
+            color: tomato;
+        }
+        a:active {
+            border: 2px solid white;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <header class="first_block">
+        <div class="title">
+            <h2 class="block1">SINGOLO*</h2>
+            <nav class="block2">
+                <a href="#">HOME</a>
+                <a href="#">&#8226</a>
+                <a href="#">SERVICES</a>
+                <a href="#">&#8226</a>
+                <a href="#">PORTFOLIO</a>
+                <a href="#">&#8226</a>
+                <a href="#">ABOUT</a>
+                <a href="#">&#8226</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+    <div class="second_block">
+        <figure class="cont2">
+            <img class="image" src="./images/slide1.png" alt="">
+        </figure>
+    </div>
+    <main>
+
+        <section class="cont3">
+            <h3>Our Services</h3>
+            <p class="text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo
+                luctus, nisi
+                erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh.</p>
+            <div class="cont3_1">
+                <li class="li">
+                    <h4>Custom Design</h4>
+                    <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
+                        ultrices
+                        velit.</p>
+                </li>
+                <li class="li">
+                    <h4>Inovative Ideas</h4>
+                    <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id
+                        lorem.</p>
+                </li>
+                <li class="li">
+                    <h4>Love Is The Answer</h4>
+                    <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+                        condimentum.</p>
+                </li>
+                <li class="li">
+                    <h4>Responsive Layout</h4>
+                    <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit
+                        leo.</p>
+                </li>
+                <li class="li">
+                    <h4>24 / 7 Support</h4>
+                    <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque
+                        egestas venenatis lorem.</p>
+                </li>
+                <li class="li">
+                    <h4>Feel Like A Star</h4>
+                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                </li>
+            </div>
+        </section>
+        <section class="fhor_block">
+            <div class="fhor_block0">
+                <div class="fhor_block1">
+                    <h3>Portfolio</h3>
+                    <p class="text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                        odiosemnecelit.</p>
+                    <div class="fhor_block2">
+                        <li class="potfol"> <img class="icon" src="./images/1.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/2.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/3.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/4.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/5.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/6.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/7.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/8.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/9.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/10.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/11.png" alt=""></li>
+                        <li class="potfol"><img class="icon" src="./images/12.png" alt=""></li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="five_block">
+        <div class="five_block0">
+            <p class="foot_left">Copyright 2020</p>
+            <nav class="foot_left">
+                <li>face</li>
+                <li>google</li>
+                <li>twitter</li>
+                <li>linkd</li>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
