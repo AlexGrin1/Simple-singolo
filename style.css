@@ -5,9 +5,9 @@
 @font-face {
   font-family: "Lato-Bold";
   src: url(./images/Lato-Bold.ttf);
-  html {
+}
+html {
   scroll-behavior: smooth;
-
 }
 body {
   display: flex;
