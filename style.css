@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Lato";
+  src: url(./images/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(./images/Lato-Bold.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -137,7 +145,7 @@ body {
   width: 40px;
   height: 40px;
 }
-.krug:hover {
+.social_icons:hover {
   transform: scale(1.1);
 }
 
