@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -120,7 +123,22 @@ body {
 
 .foot_right {
   display: inline;
-  border: 1px solid red;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #a8a9ad;
+}
+.social_icons {
+  border: 1px solid rgb(146, 145, 145);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.krug:hover {
+  transform: scale(1.1);
 }
 
 .cont2 {
@@ -216,10 +234,10 @@ h4 {
   overflow: hidden;
   padding-left: 100px;
 }
+
 a:hover {
   color: tomato;
 }
 a:active {
-  border: 2px solid white;
   color: tomato;
 }
