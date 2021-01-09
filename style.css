@@ -8,7 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
-  overflow-x:hidden;  
+  overflow-x: hidden;
 }
 body {
   display: flex;
@@ -23,7 +23,6 @@ body {
   width: 100%;
   height: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -36,12 +35,12 @@ body {
   z-index: 2;
 }
 .title {
-  width: 1020px;
+  max-width: 1020px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 20px;
-  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 .logo {
   font-size: 1.6em;
@@ -59,7 +58,6 @@ body {
 }
 .slider_block {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -67,36 +65,26 @@ body {
   top: 0;
   background-color: #f06c64;
 }
-.arrow-left{
+.arrow-left {
   position: absolute;
+  top: 38.31%;
   left: 3.92%;
-  right: 94.51%;
-  top: 38.31%;
-  bottom: 80.39%;
-  order: 2;
 }
-.arrow-left:hover{
+.arrow-left:hover,
+.arrow-right:hover {
   transform: scale(1.7);
   cursor: pointer;
   transition: 0.2s;
 }
-.arrow-right:hover{
-  transform: scale(1.7);
-  cursor: pointer;
-  transition: 0.2s;
-}
-.arrow-right{
+.arrow-right {
   position: absolute;
-  left: 94.51%;
-  right: 3.92%;
   top: 38.31%;
-  bottom: 80.39%;
+  right: 3.92%;
 }
 .slide {
-  width: 1020px;
+  max-width: 1020px;
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-content: center;
   background-color: #f06c64;
@@ -109,41 +97,42 @@ body {
   box-sizing: border-box;
 }
 .slide_image {
-  height: auto;
+  max-width: 1020px;
+  width: 100%;
 }
 .services_block {
-  width: 1020px;
-  height: auto;
+  max-width: 1020px;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
-  color: #767E9E;
+  color: #767e9e;
   box-sizing: border-box;
 }
 .services {
-  color: #767E9E;
+  color: #767e9e;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 120px 120px;
   grid-gap: 20px;
   margin-bottom: 52px;
 }
-.services_block>h3,h4 {
-  color: #666D89;
+.services_block > h3,
+h4 {
+  color: #666d89;
 }
-.image_block{
-margin: 5px 10px auto 0;
-align-self: flex-start;
+.image_block {
+  margin: 5px 10px auto 0;
+  align-self: flex-start;
 }
-.info_block{
+.info_block {
   margin: 5px 10px auto 5px;
   align-self: flex-start;
 }
 .block {
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -151,7 +140,6 @@ align-self: flex-start;
   overflow: hidden;
 }
 .portfolio_block {
-  height: auto;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -165,30 +153,30 @@ align-self: flex-start;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
-  color: #666D89;
+  color: #666d89;
   line-height: 30px;
   box-sizing: border-box;
 }
-.filter{
+.filter {
   display: inline-flex;
   list-style-type: none;
 }
-.filter_button{
-  border: 1px solid  #666D89 ;
+.filter_button {
+  border: 1px solid #666d89;
   box-sizing: border-box;
   border-radius: 5px;
   margin: 5px 10px 20px 5px;
   padding: 0 10px;
 }
-li.filter_button:hover{
-  border: 1px solid  #fdfdfd ;
+li.filter_button:hover {
+  border: 1px solid #fdfdfd;
   color: white;
   cursor: pointer;
 }
 .images_columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 20px;
   margin-bottom: 40px;
   overflow: hidden;
@@ -209,8 +197,8 @@ li.filter_button:hover{
 }
 .lower {
   background-color: rgb(50, 50, 51);
-  width: 1020px;
-  height: auto;
+  max-width: 1020px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-content: space-between;
@@ -221,7 +209,7 @@ li.filter_button:hover{
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 40px;
-  padding-right:30px ;
+  padding-right: 30px;
   font-size: 1.3em;
   font-weight: bold;
   color: #a8a9ad;
@@ -244,7 +232,7 @@ a {
 h3 {
   font-family: "Lato-Bold";
   font-size: 30px;
-  margin: 59px 0 18px 0px ;
+  margin: 59px 0 18px 0px;
   font-weight: 900;
 }
 h4 {
@@ -255,11 +243,11 @@ h4 {
 }
 .text {
   font-size: 18px;
-  line-height:30px;
+  line-height: 30px;
 }
-.small_text{
+.small_text {
   font-size: 12px;
-  line-height:22px;
+  line-height: 22px;
 }
 a:hover {
   color: tomato;
