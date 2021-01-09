@@ -180,11 +180,10 @@ li.filter_button:hover {
 .images_columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 220px));
-  grid-template-rows: repeat(auto-fit, minmax(187px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 40px;
 }
 .portfolio_image {
