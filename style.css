@@ -274,9 +274,7 @@ h4 {
   font-size: 12px;
   line-height: 22px;
 }
-a:hover {
-  color: tomato;
-}
+a:hover,
 a:active {
   color: tomato;
 }
