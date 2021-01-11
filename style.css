@@ -179,8 +179,8 @@ li.filter_button:hover {
 }
 .images_columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 220px));
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 210px));
+  grid-template-rows: repeat(auto-fit, minmax(auto, 180px));
   grid-gap: 20px;
   justify-content: center;
   align-items: center;
@@ -188,6 +188,8 @@ li.filter_button:hover {
 }
 .portfolio_image {
   list-style-type: none;
+  max-width: 220px;
+  max-height: 180px;
 }
 .footer_block {
   height: 100px;
@@ -208,7 +210,17 @@ li.filter_button:hover {
   align-content: space-between;
   position: relative;
 }
-.lower_center {
+.copyright_left {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 40px;
+  padding-right: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #a8a9ad;
+}
+.social_right {
   display: inline;
   margin-top: auto;
   margin-bottom: auto;
@@ -259,4 +271,19 @@ a:hover {
 }
 a:active {
   color: tomato;
+}
+@media screen and (max-width: 375px) {
+  .menu{
+    display: none;
+  }
+  .title {
+    justify-content: center;
+  }
+  .copyright_left{
+    display: none;
+  }
+  .lower{
+    justify-content: center;
+  }
+
 }
