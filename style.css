@@ -217,9 +217,9 @@ li.filter_button:hover {
   display: inline;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 40px;
+  padding-left: 55px;
   padding-right: 30px;
-  font-size: 1.3em;
+  font-size: 13px;
   font-weight: bold;
   color: #a8a9ad;
 }
@@ -236,8 +236,8 @@ li.filter_button:hover {
 .social_icons {
   border: 1px solid rgb(146, 145, 145);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 .social_icons:hover {
   transform: scale(1.1);
