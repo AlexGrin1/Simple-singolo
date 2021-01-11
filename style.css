@@ -14,6 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -70,7 +71,7 @@ body {
 }
 .arrow-left {
   position: absolute;
-  top: 38.31%;
+  top: 44.31%;
   left: 3.92%;
 }
 .arrow-left:hover,
@@ -81,7 +82,7 @@ body {
 }
 .arrow-right {
   position: absolute;
-  top: 38.31%;
+  top: 44.31%;
   right: 3.92%;
 }
 .slide {
@@ -167,10 +168,12 @@ h4 {
 }
 .filter_button {
   border: 1px solid #666d89;
-  box-sizing: border-box;
+  text-align: center;
   border-radius: 5px;
-  margin: 5px 10px 20px 5px;
-  padding: 0 10px;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 18px 5px 18px 5px;
+  padding: 5px 3px;
 }
 li.filter_button:hover {
   border: 1px solid #fdfdfd;
@@ -180,8 +183,8 @@ li.filter_button:hover {
 .images_columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
-  grid-template-rows: repeat(auto-fit, minmax(130px, 180px));
   grid-gap: 20px;
+
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
@@ -247,6 +250,7 @@ a {
 }
 h3 {
   font-family: "Lato-Bold";
+  font-weight: 900;
   font-size: 30px;
   margin: 59px 0 18px 0px;
   font-weight: 900;
@@ -262,6 +266,10 @@ h4 {
   line-height: 30px;
   margin-bottom: 40px;
 }
+.portfolio-text {
+  font-size: 18px;
+  line-height: 30px;
+}
 .small_text {
   font-size: 12px;
   line-height: 22px;
@@ -272,17 +280,25 @@ a:hover {
 a:active {
   color: tomato;
 }
+@media screen and (max-width: 768px) {
+  .block {
+    margin-right: 20px;
+  }
+}
 @media screen and (max-width: 375px) {
-  .menu{
+  .block {
+    margin: auto;
+  }
+  .menu {
     display: none;
   }
   .title {
     justify-content: center;
   }
-  .copyright_left{
+  .copyright_left {
     display: none;
   }
-  .lower{
+  .lower {
     justify-content: center;
   }
   .portfolio_image {
@@ -290,15 +306,14 @@ a:active {
     max-height: 128px;
   }
   .images {
-    width: 150px;
+    width: auto;
     height: 128px;
   }
-  .images_columns{
+  .images_columns {
     display: grid;
-    grid-template-areas: "a a";
-    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 13px;
     justify-content: center;
     align-items: center;
-
   }
 }
