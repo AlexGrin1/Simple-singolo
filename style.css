@@ -179,8 +179,8 @@ li.filter_button:hover {
 }
 .images_columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 210px));
-  grid-template-rows: repeat(auto-fit, minmax(auto, 180px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
+  grid-template-rows: repeat(auto-fit, minmax(130px, 180px));
   grid-gap: 20px;
   justify-content: center;
   align-items: center;
@@ -189,7 +189,7 @@ li.filter_button:hover {
 .portfolio_image {
   list-style-type: none;
   max-width: 220px;
-  max-height: 180px;
+  max-height: 187px;
 }
 .footer_block {
   height: 100px;
@@ -285,5 +285,20 @@ a:active {
   .lower{
     justify-content: center;
   }
+  .portfolio_image {
+    max-width: 150px;
+    max-height: 128px;
+  }
+  .images {
+    width: 150px;
+    height: 128px;
+  }
+  .images_columns{
+    display: grid;
+    grid-template-areas: "a a";
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
 
+  }
 }
