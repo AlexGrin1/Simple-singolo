@@ -143,6 +143,9 @@ h4 {
   list-style-type: none;
   overflow: hidden;
 }
+.block:nth-child(n+7){
+  display: none;
+}
 .portfolio_block {
   display: flex;
   justify-content: center;
@@ -184,10 +187,14 @@ li.filter_button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
   grid-gap: 20px;
+  grid-auto-flow: dense;
 
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+}
+.portfolio_image:nth-child(n+13){
+  display: none;
 }
 .portfolio_image {
   list-style-type: none;
@@ -278,14 +285,14 @@ a:hover,
 a:active {
   color: tomato;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1019px) {
   .block {
     margin-right: 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .block {
-    margin: auto;
+    margin: 0;
   }
   .menu {
     display: none;
@@ -309,7 +316,7 @@ a:active {
   }
   .images_columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 13px;
     justify-content: center;
     align-items: center;
