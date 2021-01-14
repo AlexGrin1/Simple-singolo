@@ -365,9 +365,8 @@ a:active {
     transition: all 0.3s ease-in;
   }
   .burger_menu_none {
+    position: absolute;
     left: -500px;
-    top: 0;
-    transition: ;
   }
   .burger_menu_show {
     display: block;
