@@ -26,7 +26,7 @@ body {
 .burger {
   display: none;
 }
-.burger_menu{
+.burger_menu {
   display: none;
 }
 .header_block {
@@ -149,7 +149,7 @@ h4 {
   list-style-type: none;
   overflow: hidden;
 }
-.block:nth-child(n+7){
+.block:nth-child(n + 7) {
   display: none;
 }
 .portfolio_block {
@@ -199,7 +199,7 @@ li.filter_button:hover {
   align-items: center;
   margin-bottom: 40px;
 }
-.portfolio_image:nth-child(n+13){
+.portfolio_image:nth-child(n + 13) {
   display: none;
 }
 .portfolio_image {
@@ -330,42 +330,64 @@ a:active {
   .burger {
     display: block;
     position: fixed;
-    top:34px;
+    top: 34px;
     left: 20px;
     width: 23px;
     height: 23px;
-    
     z-index: 500;
   }
-  .burger::before,
-  .burger:after{
+  .burger_center_line,
+  .burger:before,
+  .burger:after {
     content: "";
     background-color: white;
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
+    left: 0;
+    border-radius: 5px;
+  }
+  .burger_center_line {
+    top: calc(50% - 1.5px);
+  }
+  .burger:before {
+    top: 0;
     left: 0;
   }
-  .burger::before {
-  top: 0;
-  }
-  .burger:after{
+  .burger:after {
     bottom: 0;
+    left: 0;
   }
-  .burger:active{
+  .burger:active {
     transform: rotateZ(90deg);
     transition: all 0.3s ease-in;
   }
-  .burger_nav {
-  margin-top: 150px;
+  .burger_menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: -500px;
+    min-width: 250px;
+    max-width: 70vw;
+    height: 100%;
+    background: #2d303a;
+    color: white;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .burger_nav_link{
-  font-size:24px;
-  line-height: 28,8px;
-  letter-spacing :-3.5%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 27px;
+  .burger_nav {
+    margin-top: 150px;
+  }
+  .burger_nav_link {
+    font-size: 24px;
+    line-height: 28, 8px;
+    letter-spacing: -3.5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 27px;
   }
   .burger_logo {
     align-items: flex-start;
@@ -377,21 +399,5 @@ a:active {
   .burger_logo_red {
     font-size: 19.69px;
     color: tomato;
-  }
-  .burger_menu{
-    display: block;
-    position:fixed;
-    left: 0;
-    top:0;
-    margin-left: -500px;
-    min-width: 250px;
-    max-width: 70vw;
-    height: 100%;
-    background:#2D303A;
-    color: white;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
