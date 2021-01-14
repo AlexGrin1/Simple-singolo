@@ -360,12 +360,21 @@ a:active {
     transform: rotateZ(90deg);
     transition: all 0.3s ease-in;
   }
-  .burger_menu {
+  .burger_active {
+    transform: rotateZ(90deg);
+    transition: all 0.3s ease-in;
+  }
+  .burger_menu_none {
+    left: -500px;
+    top: 0;
+    transition: ;
+  }
+  .burger_menu_show {
     display: block;
     position: fixed;
-    left: 0;
+    left: 0px;
     top: 0;
-    margin-left: -500px;
+    transition: 0.4s;
     min-width: 250px;
     max-width: 70vw;
     height: 100%;
