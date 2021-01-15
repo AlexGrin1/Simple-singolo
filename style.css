@@ -184,10 +184,17 @@ h4 {
   margin: 18px 5px 18px 5px;
   padding: 5px 3px;
 }
+.filter_button_active {
+  border: 1px solid #fdfdfd;
+  color: white;
+}
 li.filter_button:hover {
   border: 1px solid #fdfdfd;
   color: white;
   cursor: pointer;
+}
+.images_hide {
+  display: none;
 }
 .images_columns {
   display: grid;
@@ -203,9 +210,11 @@ li.filter_button:hover {
   display: none;
 }
 .portfolio_image {
-  list-style-type: none;
   max-width: 220px;
   max-height: 187px;
+}
+.portfolio_image_hide {
+  display: none;
 }
 .footer_block {
   height: 100px;
@@ -287,8 +296,10 @@ h4 {
   font-size: 12px;
   line-height: 22px;
 }
-a:hover,
-a:active {
+.a_active {
+  color: tomato;
+}
+a:hover {
   color: tomato;
 }
 @media screen and (max-width: 1019px) {
@@ -354,13 +365,16 @@ a:active {
     bottom: 0;
     left: 0;
   }
+  .burger:hover {
+    cursor: pointer;
+  }
   .burger:active {
     transform: rotateZ(90deg);
-    transition: all 0.3s ease-in;
+    transition: all 0.7s ease-out;
   }
   .burger_active {
     transform: rotateZ(90deg);
-    transition: all 0.3s ease-in;
+    transition: all 0.7s ease-out;
   }
   .burger_menu_none {
     position: absolute;
