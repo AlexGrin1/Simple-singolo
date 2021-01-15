@@ -38,9 +38,10 @@ const art = portfolio.querySelector('.art');
 const graphic = portfolio.querySelector('.graphic');
 const web = portfolio.querySelector('.web');
 const artimages = images.querySelectorAll(".art");
-const webimages = images.querySelectorAll('div > .web');
-const graphics_images = images.querySelectorAll(".graphics");
+const webimages = images.getAttributeNames("web");
+const graphic_images = images.querySelectorAll(".graphic");
 const allimages = images.querySelectorAll(".all");
+
 
 art.addEventListener('click', () => {
    
@@ -48,8 +49,11 @@ art.addEventListener('click', () => {
    all.classList.remove("filter_button_active");
    web.classList.remove("filter_button_active");
    graphic.classList.remove("filter_button_active");
+   webimages.classList.toggle("images_hide")
+   
 });
 web.addEventListener('click', () => {
+   
    web.classList.toggle("filter_button_active");
    art.classList.remove("filter_button_active");
    all.classList.remove("filter_button_active");
@@ -80,4 +84,29 @@ menu.addEventListener('click', () => {
 link.addEventListener('click', () => {
    nav.classList.remove("burger_menu_show");
    menu.classList.remove("burger_active");
+});
+
+// переключение слайдов
+const right = document.querySelector(".arrow-right");
+const left = document.querySelector(".arrow-left");
+const slide1 = document.querySelector(".slide_image");
+const slide2 = document.querySelector(".slide_image2");
+const block = document.querySelector(".slider_block_red ");
+right.addEventListener('click', () => {
+   slide1.classList.toggle("slide_image");
+   slide1.classList.toggle("show");
+   slide1.classList.toggle("hide");
+   
+   slide2.classList.toggle("hide");
+   slide2.classList.toggle("show");
+   block.classList.toggle("slider_block_red");
+   block.classList.toggle("slider_block_blue");
+});
+left.addEventListener('click', () => {
+   slide1.classList.toggle("slide_image");
+   slide1.classList.toggle("hide");
+   slide2.classList.toggle("hide");
+   slide2.classList.toggle("show");
+   block.classList.toggle("slider_block_red");
+   block.classList.toggle("slider_block_blue");
 });
