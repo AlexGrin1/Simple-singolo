@@ -316,8 +316,6 @@ a:active {
     max-width: 150px;
     max-height: 128px;
   }
-  .images {
-  }
   .images_columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -328,7 +326,7 @@ a:active {
   .burger {
     display: block;
     position: fixed;
-    top: 34px;
+    top: 24px;
     left: 20px;
     width: 23px;
     height: 23px;
