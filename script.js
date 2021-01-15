@@ -96,7 +96,7 @@ right.addEventListener('click', () => {
    slide1.classList.toggle("slide_image");
    slide1.classList.toggle("show");
    slide1.classList.toggle("hide");
-   
+
    slide2.classList.toggle("hide");
    slide2.classList.toggle("show");
    block.classList.toggle("slider_block_red");
