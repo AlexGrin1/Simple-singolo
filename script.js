@@ -38,11 +38,12 @@ const art = portfolio.querySelector('.art');
 const graphic = portfolio.querySelector('.graphic');
 const web = portfolio.querySelector('.web');
 const artimages = images.querySelectorAll(".art");
-const webimages = images.querySelectorAll('.web');
+const webimages = images.querySelectorAll('div > .web');
 const graphics_images = images.querySelectorAll(".graphics");
 const allimages = images.querySelectorAll(".all");
 
 art.addEventListener('click', () => {
+   
    art.classList.toggle("filter_button_active");
    all.classList.remove("filter_button_active");
    web.classList.remove("filter_button_active");
