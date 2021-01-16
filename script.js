@@ -1,76 +1,20 @@
 // Активные ссылки при нажатии
-const header_link = document.querySelector('.menu');
-const link_home = header_link.querySelector('.home');
-const link_servces = header_link.querySelector('.serv');
-const link_portfolio = header_link.querySelector('.portfol');
-const link_contact = header_link.querySelector('.cont');
+const MENU = document.getElementById('menu');
 
-link_home.addEventListener('click', () => {
-   link_home.classList.toggle("a_active");
-   link_servces.classList.remove("a_active");
-   link_portfolio.classList.remove("a_active");
-   link_contact .classList.remove("a_active");
-});
-link_servces.addEventListener('click', () => {
-   link_servces.classList.toggle("a_active");
-   link_home.classList.remove("a_active");
-   link_portfolio.classList.remove("a_active");
-   link_contact .classList.remove("a_active");
-});
-link_portfolio.addEventListener('click', () => {
-   link_portfolio.classList.toggle("a_active");
-   link_home.classList.remove("a_active");
-   link_servces.classList.remove("a_active");
-   link_contact .classList.remove("a_active");
-});
-link_contact.addEventListener('click', () => {
-   link_contact.classList.toggle("a_active");
-   link_home.classList.remove("a_active");
-   link_portfolio.classList.remove("a_active");
-   link_servces.classList.remove("a_active");
-});
+ MENU.addEventListener('click', (event) => {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+    event.target.classList.add('a_active');
+ });
 
 // Активные кнопки фильтра
-const portfolio = document.querySelector('.portfolio');
-const images = portfolio.querySelector('.images_columns');
-const all = portfolio.querySelector('.all');
-const art = portfolio.querySelector('.art');
-const graphic = portfolio.querySelector('.graphic');
-const web = portfolio.querySelector('.web');
-const artimages = images.querySelectorAll(".art");
-const webimages = images.getAttributeNames("web");
-const graphic_images = images.querySelectorAll(".graphic");
-const allimages = images.querySelectorAll(".all");
 
+const FILTER = document.querySelector('.filter');
 
-art.addEventListener('click', () => {
-   
-   art.classList.toggle("filter_button_active");
-   all.classList.remove("filter_button_active");
-   web.classList.remove("filter_button_active");
-   graphic.classList.remove("filter_button_active");
-   webimages.classList.toggle("images_hide")
-   
+FILTER.addEventListener('click', (event) => {
+   FILTER.querySelectorAll('li').forEach(el => el.classList.remove('filter_button_active'));
+   event.target.classList.add('filter_button_active');
 });
-web.addEventListener('click', () => {
-   
-   web.classList.toggle("filter_button_active");
-   art.classList.remove("filter_button_active");
-   all.classList.remove("filter_button_active");
-   graphic.classList.remove("filter_button_active");
-});
-all.addEventListener('click', () => {
-   all.classList.toggle("filter_button_active");
-   art.classList.remove("filter_button_active");
-   web.classList.remove("filter_button_active");
-   graphic.classList.remove("filter_button_active");
-});
-graphic.addEventListener('click', () => {
-   graphic.classList.toggle("filter_button_active");
-   art.classList.remove("filter_button_active");
-   all.classList.remove("filter_button_active");
-   web.classList.remove("filter_button_active");
-});
+
 
 // Выезжающее меню
 const link = document.querySelector('.burger_nav');
@@ -110,3 +54,4 @@ left.addEventListener('click', () => {
    block.classList.toggle("slider_block_red");
    block.classList.toggle("slider_block_blue");
 });
+
