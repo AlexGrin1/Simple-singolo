@@ -1,8 +1,15 @@
-// Активные ссылки при нажатии
+// Активные ссылки навигации при нажатии
 const MENU = document.getElementById('menu');
 
  MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+    event.target.classList.add('a_active');
+ });
+// Активные ссылки навигации при нажатии Бургер меню
+const left_menu = document.querySelector('.burger_nav');
+
+left_menu.addEventListener('click', (event) => {
+   left_menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
     event.target.classList.add('a_active');
  });
 
@@ -15,19 +22,18 @@ FILTER.addEventListener('click', (event) => {
    event.target.classList.add('filter_button_active');
 });
 
-
 // Выезжающее меню
 const link = document.querySelector('.burger_nav');
-const menu =  document.querySelector(".burger");
+const burg_menu =  document.querySelector(".burger");
 const nav = document.querySelector('.burger_menu_none');
 
-menu.addEventListener('click', () => {
+burg_menu.addEventListener('click', () => {
      nav.classList.toggle("burger_menu_show");
-     menu.classList.toggle("burger_active");
+     burg_menu.classList.toggle("burger_active");
   });
 link.addEventListener('click', () => {
    nav.classList.remove("burger_menu_show");
-   menu.classList.remove("burger_active");
+   burg_menu.classList.remove("burger_active");
 });
 
 // переключение слайдов
