@@ -37,16 +37,15 @@ link.addEventListener('click', () => {
 });
 
 // переключение слайдов
+
 const right = document.querySelector(".arrow-right");
 const left = document.querySelector(".arrow-left");
 const slide1 = document.querySelector(".slide_image");
 const slide2 = document.querySelector(".slide_image2");
 const block = document.querySelector(".slider_block_red ");
 right.addEventListener('click', () => {
-   slide1.classList.toggle("slide_image");
    slide1.classList.toggle("show");
-   slide1.classList.toggle("hide");
-
+   slide1.classList.toggle("hide")
    slide2.classList.toggle("hide");
    slide2.classList.toggle("show");
    block.classList.toggle("slider_block_red");
@@ -61,3 +60,40 @@ left.addEventListener('click', () => {
    block.classList.toggle("slider_block_blue");
 });
 
+//высота блока
+
+const sli = document.querySelector('.slider_block_red');
+const header = document.querySelector('.header_block');
+const services = document.querySelector('.services_block');
+const portfolio = document.querySelector('.portfolio_block');
+const footer = document.getElementById('contact');
+
+const home = menu.querySelector('.home');
+const serv = menu.querySelector('.serv');
+const portfol = menu.querySelector('.portfol');
+const fot_cont = menu.querySelector('.cont');
+
+window.addEventListener('scroll', () => {
+   let scrollTop = window.scrollY;
+   let hedCenter = header.offsetHeight;
+   let servCenter = services.offsetHeight;
+   let portfolCenter = portfolio.offsetHeight;
+   let conCenter = footer.offsetHeight;
+   console.log(conCenter);
+   
+   
+   if (scrollTop <= hedCenter) {
+      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      home.classList.add('a_active');
+   }
+   if (scrollTop >= servCenter) {
+      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      serv.classList.add('a_active');
+   }
+   if (scrollTop >= portfolCenter) {
+      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      portfol.classList.add('a_active');
+   } 
+   
+     
+})

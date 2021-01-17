@@ -121,13 +121,9 @@ body {
 .show {
   display: block;
   margin-left: 0;
-  transition: 2s;
-  z-index: 500;
 }
 .hide {
   display: none;
-  margin-left: 1020px;
-  transition: 2s ease-in-out;
 }
 .slide_image2 {
   max-width: 1020px;
