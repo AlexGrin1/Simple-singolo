@@ -85,7 +85,7 @@ body {
   position: absolute;
   top: 50%;
   left: 3%;
-  transform: translateY(-50%) scale(1.5);
+  transform: translateY(-50%, -50%) scale(1.5);
 }
 .arrow-left:hover,
 .arrow-right:hover {
@@ -94,9 +94,9 @@ body {
   transition: 0.2s;
 }
 .arrow-right {
-  position: absolute;
-  top: 44%;
-  right: 3.92%;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%, -50%) scale(1.5);
 }
 .slide {
   max-width: 1020px;
