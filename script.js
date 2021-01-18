@@ -15,11 +15,13 @@ left_menu.addEventListener('click', (event) => {
 
 // Активные кнопки фильтра
 
-const FILTER = document.querySelector('.filter');
+const filter = document.querySelector('.filter');
 
-FILTER.addEventListener('click', (event) => {
-   FILTER.querySelectorAll('li').forEach(el => el.classList.remove('filter_button_active'));
+filter.addEventListener('click', (event) => {
+   if (event.target.tagName == "LI") {
+   filter.querySelectorAll('li').forEach(el => el.classList.remove('filter_button_active'));
    event.target.classList.add('filter_button_active');
+   }
 });
 
 // Выезжающее меню
