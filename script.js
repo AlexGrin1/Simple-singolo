@@ -81,7 +81,6 @@ window.addEventListener('scroll', () => {
    let conCenter = footer.offsetHeight;
    console.log(conCenter);
    
-   
    if (scrollTop <= hedCenter) {
       MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
       home.classList.add('a_active');
@@ -94,6 +93,4 @@ window.addEventListener('scroll', () => {
       MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
       portfol.classList.add('a_active');
    } 
-   
-     
 })
