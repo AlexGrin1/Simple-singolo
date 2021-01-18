@@ -94,6 +94,7 @@ body {
   transition: 0.2s;
 }
 .arrow-right {
+  position: absolute;
   top: 50%;
   right: 3%;
   transform: translateY(-50%, -50%) scale(1.5);
