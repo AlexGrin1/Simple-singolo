@@ -1,15 +1,15 @@
 // Активные ссылки навигации при нажатии
-const MENU = document.getElementById('menu');
+const menu = document.getElementById('menu');
 
- MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+ menu.addEventListener('click', (event) => {
+    menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
     event.target.classList.add('a_active');
  });
 // Активные ссылки навигации при нажатии Бургер меню
-const left_menu = document.querySelector('.burger_nav');
+const leftMenu = document.querySelector('.burger_nav');
 
-left_menu.addEventListener('click', (event) => {
-   left_menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+leftMenu.addEventListener('click', (event) => {
+   leftMenu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
     event.target.classList.add('a_active');
  });
 
@@ -26,16 +26,16 @@ filter.addEventListener('click', (event) => {
 
 // Выезжающее меню
 const link = document.querySelector('.burger_nav');
-const burg_menu =  document.querySelector(".burger");
+const burgMenu =  document.querySelector(".burger");
 const nav = document.querySelector('.burger_menu_none');
 
-burg_menu.addEventListener('click', () => {
+burgMenu.addEventListener('click', () => {
      nav.classList.toggle("burger_menu_show");
-     burg_menu.classList.toggle("burger_active");
+     burgMenu.classList.toggle("burger_active");
   });
 link.addEventListener('click', () => {
    nav.classList.remove("burger_menu_show");
-   burg_menu.classList.remove("burger_active");
+   burgMenu.classList.remove("burger_active");
 });
 
 // переключение слайдов
@@ -73,7 +73,7 @@ const footer = document.getElementById('contact');
 const home = menu.querySelector('.home');
 const serv = menu.querySelector('.serv');
 const portfol = menu.querySelector('.portfol');
-const fot_cont = menu.querySelector('.cont');
+const footerCont = menu.querySelector('.cont');
 
 window.addEventListener('scroll', () => {
    let scrollTop = window.scrollY;
@@ -84,15 +84,15 @@ window.addEventListener('scroll', () => {
    console.log(conCenter);
    
    if (scrollTop <= hedCenter) {
-      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
       home.classList.add('a_active');
    }
    if (scrollTop >= servCenter) {
-      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
       serv.classList.add('a_active');
    }
    if (scrollTop >= portfolCenter) {
-      MENU.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
       portfol.classList.add('a_active');
    } 
 })
