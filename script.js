@@ -97,5 +97,38 @@ window.addEventListener('scroll', () => {
    } 
 })
 
+// Сортировка изображений портфолио
+const imagesColumns = document.querySelector(".images_columns")
+const allImages = imagesColumns.querySelectorAll('img');
+const artImages = imagesColumns.querySelectorAll(".art");
+const webImages = imagesColumns.querySelectorAll(".web");
+const graphImages = imagesColumns.querySelectorAll(".graphic");
 
 
+const allBut = filter.querySelector('.all')
+const artBut = filter.querySelector('.art');
+const webBut = filter.querySelector('.web');
+const graphBut = filter.querySelector('.graphic');
+
+filter.addEventListener('click', (event) => {
+   if (event.target == allBut) {
+      for(let i = 0; i <  allImages.length; i += 1) {
+         allImages.item(i).classList.remove("order_up");
+       }
+   }
+   if (event.target == artBut) {
+      for(let i = 0; i <  artImages.length; i += 1) {
+         artImages.item(i).classList.toggle("order_up");
+       }
+   }
+   if (event.target == webBut) {
+      for(let i = 0; i < webImages.length; i += 1) {
+         webImages.item(i).classList.toggle("order_up");
+       }
+   }
+   if (event.target ==  graphBut) {
+      for(let i = 0; i <  graphImages.length; i += 1) {
+         graphImages.item(i).classList.toggle("order_up");
+       }
+   }
+})
