@@ -96,3 +96,6 @@ window.addEventListener('scroll', () => {
       portfol.classList.add('a_active');
    } 
 })
+
+
+
