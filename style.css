@@ -89,9 +89,7 @@ body {
 }
 .arrow-left:hover,
 .arrow-right:hover {
-  transform: scale(1.7);
   cursor: pointer;
-  transition: 0.2s;
 }
 .arrow-right {
   position: absolute;
