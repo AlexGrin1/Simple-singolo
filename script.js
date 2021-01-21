@@ -98,8 +98,19 @@ window.addEventListener('scroll', () => {
 })
 
 // Сортировка изображений портфолио
-const imagesColumns = document.querySelector(".images_columns")
+const port = document.querySelector(".portfolio");
+const imagesColumns = document.querySelector(".images_columns");
 const allImages = imagesColumns.querySelectorAll('img');
+
+   port.addEventListener('click', (event) => {
+      let i=event.target.id;
+      if (event.target.tagName === "LI") {
+         allImages.forEach(el => el.classList.remove('order_up'));
+         imagesColumns.querySelectorAll('.'+ i).forEach(el => el.classList.add('order_up'));
+      }
+   });
+
+/*
 const artImages = imagesColumns.querySelectorAll(".art");
 const webImages = imagesColumns.querySelectorAll(".web");
 const graphImages = imagesColumns.querySelectorAll(".graphic");
@@ -110,7 +121,9 @@ const artBut = filter.querySelector('.art');
 const webBut = filter.querySelector('.web');
 const graphBut = filter.querySelector('.graphic');
 
+
 filter.addEventListener('click', (event) => {
+  
    if (event.target == allBut) {
       for(let i = 0; i <  allImages.length; i += 1) {
          allImages.item(i).classList.remove("order_up");
@@ -132,3 +145,4 @@ filter.addEventListener('click', (event) => {
        }
    }
 })
+*/
