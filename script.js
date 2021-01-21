@@ -18,7 +18,7 @@ leftMenu.addEventListener('click', (event) => {
 const filter = document.querySelector('.filter');
 
 filter.addEventListener('click', (event) => {
-   if (event.target.tagName == "LI") {
+   if (event.target.tagName === "LI") {
    filter.querySelectorAll('li').forEach(el => el.classList.remove('filter_button_active'));
    event.target.classList.add('filter_button_active');
    }
@@ -124,22 +124,22 @@ const graphBut = filter.querySelector('.graphic');
 
 filter.addEventListener('click', (event) => {
   
-   if (event.target == allBut) {
+   if (event.target === allBut) {
       for(let i = 0; i <  allImages.length; i += 1) {
          allImages.item(i).classList.remove("order_up");
        }
    }
-   if (event.target == artBut) {
+   if (event.target === artBut) {
       for(let i = 0; i <  artImages.length; i += 1) {
          artImages.item(i).classList.toggle("order_up");
        }
    }
-   if (event.target == webBut) {
+   if (event.target === webBut) {
       for(let i = 0; i < webImages.length; i += 1) {
          webImages.item(i).classList.toggle("order_up");
        }
    }
-   if (event.target ==  graphBut) {
+   if (event.target ===  graphBut) {
       for(let i = 0; i <  graphImages.length; i += 1) {
          graphImages.item(i).classList.toggle("order_up");
        }
