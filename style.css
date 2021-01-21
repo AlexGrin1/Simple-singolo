@@ -90,6 +90,7 @@ body {
 .arrow-left:hover,
 .arrow-right:hover {
   cursor: pointer;
+  transform: translateY(-50%) scale(1.5);
 }
 .arrow-right {
   position: absolute;
