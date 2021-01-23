@@ -36,7 +36,7 @@ burgMenu.addEventListener('click', () => {
      nav.classList.toggle("burger_menu_none");
      burgMenu.classList.toggle("burger_active");
      aside.classList.toggle('aside-overlay');
-     body.classList.add('no_scroll');
+     body.classList.toggle('no_scroll');
      
    });
 aside.addEventListener('click', (event) => {
