@@ -441,13 +441,13 @@ a:hover {
   }
   .burger_logo {
     align-items: flex-start;
-    font-size: 19.69px;
-    line-height: 23.63px;
+    font-size: 20px;
+    line-height: 24px;
     letter-spacing: -3%;
     margin: 24px 20px 8px 0;
   }
   .burger_logo_red {
-    font-size: 19.69px;
+    font-size: 20px;
     color: tomato;
   }
   .services {
