@@ -81,7 +81,7 @@ left.addEventListener('click', () => {
 });
 
 //высота блока
-
+/*
 const sli = document.querySelector('.slider_block_red');
 const header = document.querySelector('.header_block');
 const services = document.querySelector('.services_block');
@@ -114,7 +114,32 @@ window.addEventListener('scroll', () => {
       portfol.classList.add('a_active');
    } 
 })
+*/
+const points = document.querySelectorAll('[data-name]');
+console.log(points);
+const navMenu = menu.querySelectorAll('a');
+console.log(navMenu);
 
+   window.addEventListener('scroll', () => {
+      for (let i=0; i < points.length; i++) {
+         let scrollTop = window.scrollY;
+         let iPoints = points.item(i);
+         let coordinatElement = iPoints.getBoundingClientRect().top;
+
+      console.log("iPoints " + points.item(i));
+      console.log("coordinatElement " +coordinatElement );
+      console.log(scrollTop);
+      console.log("navMenu[i]"+navMenu[i])
+
+         if (scrollTop >= coordinatElement ) {
+             menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+             navMenu.item(i).classList.add('a_active');
+             
+             console.log("это i = "+i)
+         }
+      }
+})
+ 
 // Сортировка изображений портфолио
 const port = document.querySelector(".portfolio");
 const imagesColumns = document.querySelector(".images_columns");
@@ -127,40 +152,3 @@ const allImages = imagesColumns.querySelectorAll('img');
          imagesColumns.querySelectorAll('.'+ i).forEach(el => el.classList.add('order_up'));
       }
    });
-
-/*
-const artImages = imagesColumns.querySelectorAll(".art");
-const webImages = imagesColumns.querySelectorAll(".web");
-const graphImages = imagesColumns.querySelectorAll(".graphic");
-
-
-const allBut = filter.querySelector('.all')
-const artBut = filter.querySelector('.art');
-const webBut = filter.querySelector('.web');
-const graphBut = filter.querySelector('.graphic');
-
-
-filter.addEventListener('click', (event) => {
-  
-   if (event.target === allBut) {
-      for(let i = 0; i <  allImages.length; i += 1) {
-         allImages.item(i).classList.remove("order_up");
-       }
-   }
-   if (event.target === artBut) {
-      for(let i = 0; i <  artImages.length; i += 1) {
-         artImages.item(i).classList.toggle("order_up");
-       }
-   }
-   if (event.target === webBut) {
-      for(let i = 0; i < webImages.length; i += 1) {
-         webImages.item(i).classList.toggle("order_up");
-       }
-   }
-   if (event.target ===  graphBut) {
-      for(let i = 0; i <  graphImages.length; i += 1) {
-         graphImages.item(i).classList.toggle("order_up");
-       }
-   }
-})
-*/
