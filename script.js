@@ -12,9 +12,7 @@ leftMenu.addEventListener('click', (event) => {
    leftMenu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
     event.target.classList.add('a_active');
  });
-
 // Активные кнопки фильтра
-
 const filter = document.querySelector('.filter');
 
 filter.addEventListener('click', (event) => {
@@ -23,7 +21,6 @@ filter.addEventListener('click', (event) => {
    event.target.classList.add('filter_button_active');
    }
 });
-
 // Выезжающее меню
 const link = document.querySelector('.burger_nav');
 const burgMenu =  document.querySelector(".burger");
@@ -36,17 +33,16 @@ burgMenu.addEventListener('click', () => {
      nav.classList.toggle("burger_menu_none");
      burgMenu.classList.toggle("burger_active");
      aside.classList.toggle('aside-overlay');
-     body.classList.toggle('no_scroll');
-     
+     body.classList.toggle('no_scroll'); 
    });
 aside.addEventListener('click', (event) => {
    if (event.target === aside) {
-       aside.classList.remove('aside-overlay');
-       burgMenu.classList.remove("burger_active");
-       nav.classList.remove("burger_menu_show");
-       nav.classList.add("burger_menu_none");
-       body.classList.remove('no_scroll');
-      }
+      aside.classList.remove('aside-overlay');
+      burgMenu.classList.remove("burger_active");
+      nav.classList.remove("burger_menu_show");
+      nav.classList.add("burger_menu_none");
+      body.classList.remove('no_scroll');
+   }
   });
 link.addEventListener('click', () => {
    nav.classList.remove("burger_menu_show");
@@ -55,9 +51,7 @@ link.addEventListener('click', () => {
    nav.classList.add("burger_menu_none");
    body.classList.remove('no_scroll');
 });
-
 // переключение слайдов
-
 const right = document.querySelector(".arrow-right");
 const left = document.querySelector(".arrow-left");
 const slide1 = document.querySelector(".slide_image");
@@ -79,67 +73,22 @@ left.addEventListener('click', () => {
    block.classList.toggle("slider_block_red");
    block.classList.toggle("slider_block_blue");
 });
-
 //высота блока
-/*
-const sli = document.querySelector('.slider_block_red');
-const header = document.querySelector('.header_block');
-const services = document.querySelector('.services_block');
-const portfolio = document.querySelector('.portfolio_block');
-const footer = document.getElementById('contact');
-
-const home = menu.querySelector('.home');
-const serv = menu.querySelector('.serv');
-const portfol = menu.querySelector('.portfol');
-const footerCont = menu.querySelector('.cont');
+const blocksWithAtributePoints = document.querySelectorAll('[data-name]');
+const navigationMenu = menu.querySelectorAll('a');
 
 window.addEventListener('scroll', () => {
-   let scrollTop = window.scrollY;
-   let hedCenter = header.offsetHeight;
-   let servCenter = services.offsetHeight;
-   let portfolCenter = portfolio.offsetHeight;
-   let conCenter = footer.offsetHeight;
-   console.log(conCenter);
-   
-   if (scrollTop <= hedCenter) {
-      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
-      home.classList.add('a_active');
-   }
-   if (scrollTop >= servCenter) {
-      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
-      serv.classList.add('a_active');
-   }
-   if (scrollTop >= portfolCenter) {
-      menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
-      portfol.classList.add('a_active');
-   } 
-})
-*/
-const points = document.querySelectorAll('[data-name]');
-console.log(points);
-const navMenu = menu.querySelectorAll('a');
-console.log(navMenu);
+   for (let i=0; i < blocksWithAtributePoints.length; i++) {
+      const scrollPosition = window.scrollY;
+      const currenеBlockWithPoints = blocksWithAtributePoints.item(i);
+      const coordinatElement = currenеBlockWithPoints.getBoundingClientRect().top;
 
-   window.addEventListener('scroll', () => {
-      for (let i=0; i < points.length; i++) {
-         let scrollTop = window.scrollY;
-         let iPoints = points.item(i);
-         let coordinatElement = iPoints.getBoundingClientRect().top;
-
-      console.log("iPoints " + points.item(i));
-      console.log("coordinatElement " +coordinatElement );
-      console.log(scrollTop);
-      console.log("navMenu[i]"+navMenu[i])
-
-         if (scrollTop >= coordinatElement ) {
-             menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
-             navMenu.item(i).classList.add('a_active');
-             
-             console.log("это i = "+i)
-         }
+      if (scrollPosition >= coordinatElement ) {
+         menu.querySelectorAll('a').forEach(el => el.classList.remove('a_active'));
+         navigationMenu.item(i).classList.add('a_active');
       }
+   }
 })
- 
 // Сортировка изображений портфолио
 const port = document.querySelector(".portfolio");
 const imagesColumns = document.querySelector(".images_columns");
