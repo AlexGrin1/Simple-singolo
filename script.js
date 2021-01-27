@@ -1,25 +1,3 @@
-// Активные ссылки навигации при нажатии Бургер меню
-const leftMenu = document.querySelector(".burger_nav");
-
-leftMenu.addEventListener("click", (event) => {
-  leftMenu
-    .querySelectorAll("a")
-    .forEach((el) => el.classList.remove("a_active"));
-  event.target.classList.add("a_active");
-});
-
-// Активные кнопки фильтра
-const filter = document.querySelector(".filter");
-
-filter.addEventListener("click", (event) => {
-  if (event.target.tagName === "LI") {
-    filter
-      .querySelectorAll("li")
-      .forEach((el) => el.classList.remove("filter_button_active"));
-    event.target.classList.add("filter_button_active");
-  }
-});
-
 // Выезжающее меню
 const link = document.querySelector(".burger_nav");
 const burgMenu = document.querySelector(".burger");
@@ -78,6 +56,7 @@ left.addEventListener("click", () => {
 });
 
 //скролл
+// Активные ссылки навигации при нажатии Бургер меню
 
 function debounce(func, wait, immediate) {
   let timeout;
@@ -102,6 +81,7 @@ function debounce(func, wait, immediate) {
 }
 
 const showLinks = () => {
+  const leftMenu = document.querySelector(".burger_nav");
   const blocksWithAttributePoints = document.querySelectorAll("[data-name]");
   const navigationMenu = menu.querySelectorAll("a");
   for (let i = 0; i < blocksWithAttributePoints.length; i++) {
@@ -110,6 +90,10 @@ const showLinks = () => {
     const distanceFromTop = currentBlockWithPoints.getBoundingClientRect().top;
 
     if (scrollPosition >= distanceFromTop) {
+      leftMenu
+        .querySelectorAll("a")
+        .forEach((el) => el.classList.remove("a_active"));
+      leftMenu.querySelectorAll("a").item(i).classList.add("a_active");
       menu
         .querySelectorAll("a")
         .forEach((el) => el.classList.remove("a_active"));
@@ -121,6 +105,9 @@ const showLinks = () => {
 window.addEventListener("scroll", debounce(showLinks, 150));
 
 // Сортировка изображений портфолио
+// Активные кнопки фильтра
+
+const filter = document.querySelector(".filter");
 const port = document.querySelector(".portfolio");
 const imagesColumns = document.querySelector(".images_columns");
 const allImages = imagesColumns.querySelectorAll("img");
@@ -128,6 +115,10 @@ const allImages = imagesColumns.querySelectorAll("img");
 port.addEventListener("click", (event) => {
   let i = event.target.id;
   if (event.target.tagName === "LI") {
+    filter
+      .querySelectorAll("li")
+      .forEach((el) => el.classList.remove("filter_button_active"));
+    event.target.classList.add("filter_button_active");
     allImages.forEach((el) => el.classList.remove("order_up"));
     imagesColumns
       .querySelectorAll("." + i)
