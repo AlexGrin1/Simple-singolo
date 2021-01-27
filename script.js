@@ -100,16 +100,16 @@ function debounce(func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 }
-const showLinks = () => {
-  const blocksWithAtributePoints = document.querySelectorAll("[data-name]");
-  const navigationMenu = menu.querySelectorAll("a");
-  for (let i = 0; i < blocksWithAtributePoints.length; i++) {
-    const scrollPosition = window.scrollY;
-    const currentBlockWithPoints = blocksWithAtributePoints.item(i);
-    const coordinateElement = currentBlockWithPoints.getBoundingClientRect()
-      .top;
 
-    if (scrollPosition >= coordinateElement) {
+const showLinks = () => {
+  const blocksWithAttributePoints = document.querySelectorAll("[data-name]");
+  const navigationMenu = menu.querySelectorAll("a");
+  for (let i = 0; i < blocksWithAttributePoints.length; i++) {
+    const scrollPosition = window.scrollY;
+    const currentBlockWithPoints = blocksWithAttributePoints.item(i);
+    const distanceFromTop = currentBlockWithPoints.getBoundingClientRect().top;
+
+    if (scrollPosition >= distanceFromTop) {
       menu
         .querySelectorAll("a")
         .forEach((el) => el.classList.remove("a_active"));
@@ -118,7 +118,7 @@ const showLinks = () => {
   }
 };
 
-window.addEventListener("scroll", debounce(showLinks, 50));
+window.addEventListener("scroll", debounce(showLinks, 150));
 
 // Сортировка изображений портфолио
 const port = document.querySelector(".portfolio");
