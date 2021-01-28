@@ -46,20 +46,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 .logo {
   font-size: 1.6em;
-  margin: 8px 20px 8px 40px;
 }
 .logo_red {
   font-size: 1.1em;
   color: tomato;
 }
 .menu {
-  margin: auto;
   text-align: right;
-  margin-right: 40px;
+  margin-right: px;
   font-size: 12px;
 }
 .slider_block_red {
