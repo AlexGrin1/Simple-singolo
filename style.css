@@ -268,7 +268,7 @@ li.filter_button:hover {
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 40px;
-  padding-right: 30px;
+  padding-right: 40px;
   font-size: 1.3em;
   font-weight: bold;
   color: #a8a9ad;
@@ -285,6 +285,9 @@ li.filter_button:hover {
 a {
   text-decoration: none;
   color: white;
+}
+nav span {
+  font-size: 0.8em;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -366,6 +369,9 @@ a:hover {
   }
   .copyright_left {
     display: none;
+  }
+  .social_right {
+    padding: 0;
   }
   .lower {
     justify-content: center;
