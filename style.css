@@ -473,6 +473,11 @@ a:hover {
   }
 }
 @media screen and (max-width: 400px) {
+  .info_block {
+    margin: 5px 0 auto 5px;
+    align-self: flex-start;
+  }
+
   .images_columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
